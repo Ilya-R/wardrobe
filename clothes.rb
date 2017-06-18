@@ -1,12 +1,12 @@
+# Класс содержащий в себе описание одежды
 class Clothes
-
-  def initialize(descript, tipe, temper_range)
+  def initialize(descript, type, temper_range)
     @description = descript
-    @tipe = tipe
+    @type = type
     @temper_range = temper_range
   end
 
   attr_reader :description
   attr_reader :temper_range
-  attr_reader :tipe
+  attr_reader :type
 end
