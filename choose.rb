@@ -1,5 +1,5 @@
-require_relative 'clothes.rb'
-require_relative 'wardrobe.rb'
+require_relative 'lib/clothes.rb'
+require_relative 'lib/wardrobe.rb'
 
 if Gem.win_platform?
   Encoding.default_external = Encoding.find(Encoding.locale_charmap)
