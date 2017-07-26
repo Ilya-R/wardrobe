@@ -1,4 +1,4 @@
-require_relative 'lib/clothes.rb'
+require_relative 'lib/clothes_item.rb'
 require_relative 'lib/wardrobe.rb'
 
 if Gem.win_platform?
@@ -10,8 +10,8 @@ if Gem.win_platform?
   end
 end
 
-ver = "Программа выбор одежды v1.0\n\n"
-puts ver
+puts 'Программа выбор одежды v1.0\n\n'
+
 
 data_dir = File.dirname(__FILE__) + '/data/'
 
@@ -21,6 +21,4 @@ puts 'Введите температуру на улице'
 user_temp = STDIN.gets.chomp.to_i
 puts "Вы ввели #{user_temp}"
 
-wardrobe.clothe_types.each do |item|
-  puts wardrobe.get_for_temper_type(user_temp, item)
-end
+wardrobe.types.each { |item| puts wardrobe.get_for_temper_type(user_temp, item) }
