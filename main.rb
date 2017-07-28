@@ -18,7 +18,7 @@ data_dir = File.dirname(__FILE__) + '/data/'
 wardrobe = Wardrobe.new(data_dir)
 
 puts 'Введите температуру на улице'
-user_temp = STDIN.gets.chomp.to_i
+user_temp = STDIN.gets.to_i
 puts "Вы ввели #{user_temp}"
 
 wardrobe.types.each { |item| puts wardrobe.get_for_temper_type(user_temp, item) }
